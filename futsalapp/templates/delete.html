@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+
+{% block main %}
+<div class="container">
+
+    <div class="alert alert-danger " role="alert"><strong>Are you sure want to Delete: {{person.first_name}} {{person.last_name}}</strong>
+      </div>
+      <form method="POST" action="">
+        {% csrf_token%}
+    
+        <a href="/employee"> <button  class="btn btn-outline-info btn-sm">Update</button></a>
+        <button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>  
+    </form>
+    </div>
+{% endblock %}

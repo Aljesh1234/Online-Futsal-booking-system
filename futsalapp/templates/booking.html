@@ -1,0 +1,50 @@
+{% extends "index.html" %}
+
+{% block main %}
+<div class="container">
+    <form action="" method="POST">
+        {% csrf_token %}  
+              <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" required>
+          </div>
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Enter mail">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+
+        <div class="mb-3">
+        <label for="mobile" class="form-label">Mobile Number</label>
+        <input type="number" class="form-control" id="mobile" name="mobile" placeholder="Enter Mobile Number" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="futsal" class="form-label">Choose a Futsal</label>
+            <select class="form-control" id="futsal" name="futsal" required>
+                <option value="" disabled selected>Select a futsal</option>
+                <option value="Santingar">Santingar</option>
+                <option value="Baneshwor">Baneshwor</option>
+                <option value="Sankhamol">Sankhamol</option>
+                <option value="Jadibuti">Jadibuti</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="calender" class="form-label">Calender</label>
+            <input type="date" class="form-control" id="calender" name="calender"  required>
+        </div>
+
+        <div class="mb-3">
+            <label for="time" class="form-label">Time</label>
+            <input type="text" class="form-control" id="time" name="time" placeholder="Enter time"  required>
+        </div>
+
+       
+    
+       <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
+
+{% endblock %}
